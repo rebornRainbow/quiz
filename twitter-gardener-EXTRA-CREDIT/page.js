@@ -25,5 +25,13 @@ function onMessage(gardeningInProgress) {
   // NOTE: This extension is EXTRA CREDIT and is not required for HW2.
 
   // If `gardeningInProgress` is true, that means "Start Gardening" was clicked.
-  // If `gardeningInProgress` is false, that means "Stop Gardening" was clicked.
+  if(gardeningInProgress === true)
+  {
+    const url = chrome.runtime.getURL('images/rose-cursor.gif');
+    body = document.querySelector('body');
+    body.style.cursor = 'url('+url+') 4 12, auto';
+  }else
+  {// If `gardeningInProgress` is false, that means "Stop Gardening" was clicked.
+    body.style.cursor = '';
+  }
 }

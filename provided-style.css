@@ -13,6 +13,19 @@ article {
   width: 700px;
 }
 
+@media (max-width:700px) {
+  article{
+    width: 95%;
+  }
+  header div span{
+    display: none !important;
+  }
+
+}
+
+
+
+
 #author {
   font-size: 14px;
 }
@@ -106,3 +119,107 @@ p {
   padding: 10px;
   max-width: 75%;
 }
+
+:root{
+  --img-width:calc( 32.5% - 20px);
+  --con-height: calc(var(--img-width)+40px);
+  --total-h:calc(var(--con-height)*3+80px);
+}
+
+.choice-grid{
+  height: var(--con-height);
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.choice-grid div{
+  width: var(--img-width); 
+  
+  height: var(--con-height);
+
+  background-color: #f4f4f4;
+  border: 1px thick #dcdcdc;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+
+
+
+@media (max-width:500px){
+  .choice-grid div
+  {
+    width: 49%;
+  }
+}
+
+*{
+
+  cursor:url(../hw2-quiz-ext-SergheiMihailov/twitter-gardener-EXTRA-CREDIT/images/rose-cursor.gif),auto;
+}
+
+.selected{
+  background-color: #cfe3ff !important;
+}
+
+.unselected{
+  opacity: 0.6;
+  background-color: #f4f4f4 !important;
+}
+
+.hidden{
+  display: none !important;
+}
+
+
+
+.choice-grid div img{
+  width : calc(100% - 18px);
+  margin-top: 9px;
+  margin-left: 9px;
+}
+
+#final{
+  
+  margin-top: 40px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#final button{
+  border: none;
+  background-color: #cecece;
+  height: 50px;
+  width: 95%;
+  margin-top: 2.5%;
+}
+
+#final button:hover{
+  border: none;
+  background-color: #e0e0e0;
+  height: 50px;
+  margin-top: 2.5%;
+}
+
+#final div{
+ 
+  width: 95%;
+}
+
+#final_head{
+  margin-top: 2.5%;
+  font-size: 1.5em;
+}
+
+#final_head,#final_con{
+  margin-bottom: 18px;
+}
+
+
